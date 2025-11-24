@@ -13,35 +13,126 @@ local mim = {
 mim.columns = {
     A = {
         label = "Наименование товара",
-        description = "Краткое наименование товара (read-only)",
+        description = "Наименование товара (вводит пользователь)",
         field_type = "STRING",
         is_required = true,
         read_only = true
     },
     B = {
-        label = "Категория",
-        description = "Категория товара (например: Крепеж) (read-only)",
+        label = "Категория клиента",
+        description = "Категория клиента (вводит пользователь)",
         field_type = "STRING",
         is_required = false,
         read_only = true
     },
     C = {
         label = "Полное название товара",
-        description = "Расширенное описание товара с техническими характеристиками (read-write)",
+        description = "Полное название товара",
         field_type = "STRING",
         is_required = false,
         read_only = false
     },
     D = {
-        label = "Возможность поставки через маркетплейс",
-        description = "Да или нет - возможность поставки товара через маркетплейс (read-write)",
+        label = "Возможность поставки через маркетплейс Да / Нет",
+        description = "Возможность поставки через маркетплейс",
         field_type = "STRING",
         is_required = false,
         read_only = false
     },
     E = {
-        label = "Источник, на котором найден товар",
-        description = "Название источника или маркетплейса, где был найден товар (read-write)",
+        label = "Источник № 1, на котором найден товар",
+        description = "Источник № 1",
+        field_type = "STRING",
+        is_required = false,
+        read_only = false
+    },
+    F = {
+        label = "Источник № 2, на котором найден товар",
+        description = "Источник № 2",
+        field_type = "STRING",
+        is_required = false,
+        read_only = false
+    },
+    G = {
+        label = "Источник № 3, на котором найден товар",
+        description = "Источник № 3",
+        field_type = "STRING",
+        is_required = false,
+        read_only = false
+    },
+    H = {
+        label = "Стандартизованный, Да/Нет",
+        description = "Стандартизованный товар",
+        field_type = "STRING",
+        is_required = false,
+        read_only = false
+    },
+    I = {
+        label = "Выпускается Да/Нет",
+        description = "Выпускается ли товар",
+        field_type = "STRING",
+        is_required = false,
+        read_only = false
+    },
+    J = {
+        label = "Бренд искл. Да/Нет",
+        description = "Бренд исключение",
+        field_type = "STRING",
+        is_required = false,
+        read_only = false
+    },
+    K = {
+        label = "Категория искл. Да/Нет",
+        description = "Категория исключение",
+        field_type = "STRING",
+        is_required = false,
+        read_only = false
+    },
+    L = {
+        label = "Под заказ Да/Нет",
+        description = "Товар под заказ",
+        field_type = "STRING",
+        is_required = false,
+        read_only = false
+    },
+    M = {
+        label = "Имеет ограничение в сфере реализации Да/Нет",
+        description = "Ограничения в реализации",
+        field_type = "STRING",
+        is_required = false,
+        read_only = false
+    },
+    N = {
+        label = "Сложный монтаж Да/Нет",
+        description = "Сложный монтаж",
+        field_type = "STRING",
+        is_required = false,
+        read_only = false
+    },
+    O = {
+        label = "Хрупкий Да/Нет",
+        description = "Хрупкий товар",
+        field_type = "STRING",
+        is_required = false,
+        read_only = false
+    },
+    P = {
+        label = "Особые правила Да/Нет",
+        description = "Особые правила",
+        field_type = "STRING",
+        is_required = false,
+        read_only = false
+    },
+    Q = {
+        label = "Обезличенный материал Да/Нет",
+        description = "Обезличенный материал",
+        field_type = "STRING",
+        is_required = false,
+        read_only = false
+    },
+    R = {
+        label = "Габариты Да/Нет",
+        description = "Габаритный товар",
         field_type = "STRING",
         is_required = false,
         read_only = false
@@ -120,7 +211,7 @@ mim.prompt = [[
 <data_schema>
 <constraints>
 <readonly_columns>A, B</readonly_columns>
-<writable_columns>C, D, E</writable_columns>
+<writable_columns>C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R</writable_columns>
 <warning>НЕ ИЗМЕНЯТЬ колонки A-B! Только чтение!</warning>
 </constraints>
 
